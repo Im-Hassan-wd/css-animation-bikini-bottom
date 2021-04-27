@@ -1,0 +1,202 @@
+/*//   G L O B A L  //*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  background-image: url(./img/ocean.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+.bubble, .bubble2{
+  width: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 0.5;
+}
+@keyframes float {
+  from{
+    transform: translateY(100px);
+  }
+  to{
+    transform: translateY(1000px);
+  }
+}
+/*---DOLPHIN-----*/
+#dolphin {
+  width: 200px;
+  top: 100px;
+  left: 0;
+  position: absolute;
+  opacity: 0.7;
+  animation: swimdolphin 17s 2s infinite linear both;
+}
+#dolphin-body,
+#dolphin-left-fin {
+  animation: wiggle 1s alternate infinite;
+}
+@keyframes swimdolphin {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(1300px);
+  }
+}
+@keyframes wiggle {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(25deg);
+  }
+}
+/*-CLOUWN---*/
+#clouwn {
+  width: 150px;
+  left: 0;
+  top: 300px;
+  position: absolute;
+  animation: swimclouwn 20s 3s infinite linear both;
+}
+.clouwn-wrap {
+  animation: twirlclouwn 1s infinite linear alternate;
+}
+@keyframes swimclouwn {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(1200px);
+  }
+}
+@keyframes twirlclouwn {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(5deg);
+  }
+  70% {
+    transform: rotateZ(3deg);
+  }
+  80% {
+    transform: rotateZ(4deg);
+  }
+  100% {
+    transform: rotateZ(4deg);
+  }
+}
+/*-BENZFISH---*/
+#benzfish {
+  width: 150px;
+  position: absolute;
+  left: 0px;
+  top: 400px;
+  animation: swimbenz 15s 5s infinite linear reverse both;
+}
+#benzfish-fin {
+  animation: twirlfin 0.5s infinite linear;
+}
+#benzfish-body {
+  animation: twirltail 0.5s alternate linear;
+}
+@keyframes swimbenz {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 1300px;
+  }
+}
+@keyframes twirlfin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(20deg);
+  }
+}
+@keyframes twirltail {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(20deg);
+  }
+}
+/*----OCTOPUS---*/
+#octopus {
+  opacity: 0.5;
+  position: absolute;
+  top: 200px;
+  left: 10px;
+  animation: swimoctopus 25s infinite linear reverse both;
+}
+#octopus-leg1 {
+  animation: twirl1 1s alternate infinite;
+}
+#octopus-leg2 {
+  animation: twirl2 2s alternate infinite;
+}
+
+@keyframes swimoctopus {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
+}
+@keyframes twirl1 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(20deg);
+  }
+}
+@keyframes twirl2 {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(50deg);
+  }
+}
+/* BLACK FISH */
+#black-fish {
+  width: 200px;
+  position: absolute;
+  opacity: 0.2;
+  animation: swimblack 15s 4s infinite linear both;
+}
+@keyframes swimblack {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(1000px);
+  }
+}
+#snake {
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  opacity: 0.5;
+  animation: move 20s linear infinite reverse both;
+}
+@keyframes move {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(1300px);
+  }
+}
